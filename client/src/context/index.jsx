@@ -1,4 +1,5 @@
 import React, { useContext, createContext } from 'react';
+import dotenv from 'dotenv';
 
 import {
   useAddress,
@@ -12,8 +13,10 @@ import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-  const { contract, isLoading } = useContract(process.env.CONTRACT);
-  console.log('Contract', contract);
+  const { contract, isLoading } = useContract(
+    '0x42d8d6f1287b4e51c5c99eb047ce79cb83bdb16f'
+  );
+
   // console.log('Current Chain ID:', contract.provider.chainId);
 
   const { mutateAsync: createCampaign } = useContractWrite(

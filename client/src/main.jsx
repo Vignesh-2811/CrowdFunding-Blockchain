@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThirdwebProvider
     activeChain='goerli'
-    clientId={process.env.CLIENT_ID} // You can get a client id from dashboard settings
+    clientId='c052ad40db3af6852463729e6e3dc304'
   >
     <Router>
       <StateContextProvider>
