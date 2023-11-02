@@ -12,9 +12,7 @@ import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
-  const { contract, isLoading } = useContract(
-    '0x42D8d6f1287B4E51c5C99EB047CE79cb83bDb16f'
-  );
+  const { contract, isLoading } = useContract(process.env.CONTRACT);
   console.log('Contract', contract);
   // console.log('Current Chain ID:', contract.provider.chainId);
 

@@ -9,6 +9,7 @@ import { thirdweb } from '../assets';
 
 const CampaignDetails = () => {
   const { state } = useLocation();
+  console.log(state);
   const navigate = useNavigate();
   const { donate, getDonations, contract, address } = useStateContext();
 
